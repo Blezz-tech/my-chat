@@ -1,0 +1,4 @@
+# MyChat
+
+- backend
+- fronted
