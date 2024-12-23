@@ -13,7 +13,10 @@ Route::get('/', function () {
 Route::prefix('v1')->group(function () {
 
 
-    Route::middleware(['auth'])->group(function () {
+    Route::middleware([
+        // 'auth'
+        // TODO: Понять как делать авторизацию и сохранение сессии для REST API
+        ])->group(function () {
         Route::apiResource('user', UserController::class)->except(['index', 'store']);
         Route::apiResource('settings', UserController::class)->except(['index', 'store']);
         Route::apiResource('chat', ChatController::class);
