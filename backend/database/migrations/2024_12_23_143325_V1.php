@@ -42,8 +42,6 @@ return new class extends Migration
         Schema::create('chat_user', function (Blueprint $table) {
             $table->id();
 
-            $table->string('name');
-            $table->string('description');
             $table->boolean('is_archive')->default(false);
 
             $table->timestamps();
